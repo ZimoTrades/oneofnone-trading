@@ -1,0 +1,74 @@
+{% extends "episodes/base_episode.html" %}
+{% block title %}Episode 03 — Market Regimes Explained | One of None Trading{% endblock %}
+{% block meta_desc %}Defining market structure mechanically so results can be compared across time. A framework for separating trending, ranging, and transitional conditions.{% endblock %}
+
+{% set ep_num = "03" %}
+{% set ep_title = "Market Regimes Explained" %}
+{% set ep_subtitle = "Defining market structure mechanically so results can be compared across time." %}
+{% set ep_watch = "https://youtu.be/D9Ef3SfZ9-A" %}
+{% set ep_prev = "02" %}
+{% set ep_next = "04" %}
+
+{% block transcript %}
+<div class="ep-section">
+    <div class="ep-section-title">The Problem This Episode Solves</div>
+    <p>If market structure is defined discretionarily, it isn't structure at all.</p>
+    <p>Any structural framework that cannot be applied consistently cannot be measured. And if it cannot be measured, it cannot be conditioned on, compared across datasets, or meaningfully integrated into a trading system. At that point, it becomes narrative — not information.</p>
+    <p>By the end of this episode, market structure should no longer feel like something you recognise on a chart, but something you mechanically identify. The goal is to move away from subjective labels and toward finite, testable market regimes that can be used to condition probabilities without hindsight bias.</p>
+</div>
+
+<div class="ep-section">
+    <div class="ep-section-title">Market Regimes as Market State</div>
+    <p>A market regime is not a forecast, and it is not a signal. It is a state — a recurring condition under which price behaves differently, features interact differently, and outcomes distribute differently relative to other states.</p>
+    <p>Crucially, a regime does not predict what will happen. It conditions what is more or less probable.</p>
+    <p>A useful analogy is weather. The weather does not dictate what you wear, but it meaningfully constrains your choices. In extreme heat, certain outcomes become unlikely. Markets behave the same way. A regime doesn't guarantee an expansion or a reversal — but it changes the likelihood landscape.</p>
+    <p>This distinction matters because most traders misuse structure as a forecasting tool, rather than a conditioning variable.</p>
+</div>
+
+<div class="ep-section">
+    <div class="ep-section-title">Why Regimes Are Necessary in Data</div>
+    <p>Without regime differentiation, all observations are implicitly treated as equivalent. This is a problem.</p>
+    <p>A setup might show a 50% win rate across all data, but once you separate that data by regime, you may find that the same setup performs exceptionally well in one state and poorly in another. Without regimes, these contradictions are averaged away, creating the illusion of inconsistency.</p>
+    <p>Regimes don't make a strategy work. They explain why it works sometimes and fails other times.</p>
+</div>
+
+<div class="ep-section">
+    <div class="ep-section-title">Why Subjective Structure Fails</div>
+    <p>Most traders rely on descriptive labels such as "trending," "ranging," or "choppy." These labels feel intuitive, but they fail under scrutiny. They are defined differently by different traders, defined differently by the same trader at different times, and often only assigned after the outcome is known. Because of this, they cannot be tested.</p>
+    <p>Any framework that changes its definition depending on context is not a framework — it's a justification tool. If two traders cannot independently label the same chart in the same way, the structure is not externally observable. And if it cannot be observed consistently, it cannot be measured.</p>
+</div>
+
+<div class="ep-section">
+    <div class="ep-section-title">Criteria for a Valid Market Regime</div>
+    <p>For a market regime to be useful, it must meet several strict conditions. It must be finite or binary rather than continuous. It must be externally observable so that another trader could apply the same label. It must be stable across time, identifiable in live conditions rather than retrospectively, and behaviourally relevant — meaning it plausibly influences how price interacts with features.</p>
+    <p>Anything that fails these criteria is unsuitable for statistical work.</p>
+</div>
+
+<div class="ep-section">
+    <div class="ep-section-title">How Structure Is Defined Mechanically</div>
+    <p>Rather than inventing new structural labels, this framework adopts an existing conceptual framework: market maker models. Market maker models describe whether bullish or bearish expansion is conditionally more probable, based on prior displacement through liquidity. They are not entry models, signals, or guarantees. They describe market state.</p>
+    <p>A model is initiated when price strongly displaces through swing liquidity on a given timeframe. Strong displacement is defined by a candle close that decisively invalidates an opposing confluence — in this case swing liquidity — rather than merely wicking into it. Weak displacement implies rejection and is thus insufficient.</p>
+    <p>Once initiated, the model remains valid until it is invalidated — either by opposing displacement, by respect of an external opposing confluence, or by initiation of a model in the opposite direction. This definition is mechanical, observable, and testable.</p>
+</div>
+
+<div class="ep-section">
+    <div class="ep-section-title">Timeframe Relativity and Structural Alignment</div>
+    <p>Market structure is not uniform across timeframes. A lack of structure on one timeframe does not imply a lack of structure on all others. Higher timeframes exert greater influence, but lower timeframes still matter for execution and interaction.</p>
+    <p>Rather than labelling structure independently on each timeframe, regimes are defined based on alignment and lack of alignment across timeframes, relative to the entry logic. This produces five finite regimes:</p>
+    <p>A lack of weekly structure and below. A lack of 4-hour structure and below. A lack of hourly structure and below. Structure in favour of the entry logic. Structure against the entry logic.</p>
+    <p>"In favour" and "against" are not directional labels. They are defined relative to the trade model being executed.</p>
+</div>
+
+<div class="ep-section">
+    <div class="ep-section-title">Why These Regimes Matter</div>
+    <p>Two identical expansions can occur under different regimes depending on the behaviour that preceded them. The outcome may look the same on the right side of the chart, but the probabilistic context is not.</p>
+    <p>Structure is defined by prior behaviour, not future results. This is why regimes cannot be assigned retrospectively. If a regime only becomes clear after the move has completed, it has no value in live trading.</p>
+    <p>When regimes are defined mechanically, they allow probabilities to be conditioned honestly. Variance becomes explainable rather than mysterious, and data contradictions disappear.</p>
+</div>
+
+<div class="ep-section">
+    <div class="ep-section-title">Bridge to the Next Episode</div>
+    <p>Market structure is not a prediction. It is a state. When defined mechanically, market regimes allow you to remove subjectivity, eliminate hindsight bias, and build strategies that are testable rather than narrative-driven.</p>
+    <p>In the next phase of this series, we move out of orientation and into hypothesis formation, where these regimes are no longer theoretical — they are measured.</p>
+</div>
+{% endblock %}

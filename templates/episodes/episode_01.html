@@ -1,0 +1,43 @@
+{% extends "episodes/base_episode.html" %}
+{% block title %}Episode 01 — How I Built A Quant-Inspired Trading Strategy | One of None Trading{% endblock %}
+{% block meta_desc %}Series overview and the complete development process — from the first hypothesis to a live automated forex strategy. The foundation for everything that follows.{% endblock %}
+
+{% set ep_num = "01" %}
+{% set ep_title = "How I Built A Quant-Inspired Trading Strategy" %}
+{% set ep_subtitle = "Series overview and the full development process from idea to execution." %}
+{% set ep_watch = "https://www.youtube.com/watch?v=qHZj1Gbg34g" %}
+{% set ep_prev = None %}
+{% set ep_next = "02" %}
+
+{% block transcript %}
+<div class="ep-section">
+    <div class="ep-section-title">Overview</div>
+    <p>Most retail trading strategies fail long before the first trade is placed — not necessarily because markets are perfectly efficient, but because the methodology used to build those strategies is flawed. This series isn't about live signals, setups, or trade calls. It's about the process used to develop a quant-inspired approach that is testable, structured, and statistically accountable.</p>
+    <p>The goal of the series is to correct a major problem in the social media trading space: people are shown what to do, but rarely taught how to prove whether what they're doing has edge.</p>
+</div>
+
+<div class="ep-section">
+    <div class="ep-section-title">The Problem With Discretionary Trading</div>
+    <p>If you search "trading strategy" on YouTube or TikTok, you'll find a flood of discretionary systems paired with heavy emphasis on psychology. Discretionary strategies are popular for two reasons: they can be marketed as simple, and when performance fails, the blame can be shifted to mindset and discipline rather than the rules themselves.</p>
+    <p>That doesn't mean discretion can't work — it can — but when rules aren't falsifiable and outcomes aren't clearly defined, there's no objective way to separate the trader's skill from the strategy's expectancy. That lack of an objective feedback loop creates confusion, self-blame, and constant strategy-hopping.</p>
+</div>
+
+<div class="ep-section">
+    <div class="ep-section-title">What This Series Uses</div>
+    <p>This series is designed as an alternative. It's built for the average retail trader, so everything covered uses only OHLC price data — no order flow, no institutional feeds, and nothing inaccessible. That's not a limitation; it's a constraint that forces clarity and statistical honesty.</p>
+</div>
+
+<div class="ep-section">
+    <div class="ep-section-title">The Process</div>
+    <p>The process follows a strict sequence: data → features → theory → strategy → backtesting.</p>
+    <p>Data is simply consistent observations — what happens, under what conditions, and how often. Features are structured representations of that behaviour that can later be tested. Theory is where you form falsifiable hypotheses about why certain behaviours might matter. Strategy is where those hypotheses become rules and constraints that can be executed consistently. Backtesting is where you validate behaviour and profitability — not to find certainty, but to understand distributions, variance, and expectancy.</p>
+    <p>The order matters. Skipping ahead — for example, jumping straight from an observation to execution — doesn't save time; it avoids the work required for long-term consistency.</p>
+</div>
+
+<div class="ep-section">
+    <div class="ep-section-title">What You'll Have By The End</div>
+    <p>This series isn't meant to be consumed passively. Each episode builds on the last, and watching sequentially is essential.</p>
+    <p>By the end, you'll have a complete view of the framework used to build a strategy from idea, to testing, to execution, to ongoing maintenance. More importantly, you'll have a repeatable process you can apply to your own ideas — whether you adapt what's covered here or build something entirely new.</p>
+    <p>In the next episode, we start at the beginning: how to turn raw price behaviour into testable features without assuming predictive value.</p>
+</div>
+{% endblock %}
