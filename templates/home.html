@@ -1,0 +1,503 @@
+{% extends "base.html" %}
+{% block title %}One of None Trading | Trading Strategy Research, Validation & Automation{% endblock %}
+{% block meta_desc %}A structured approach to trading strategy development. From hypothesis formation to automated validation and live execution — documented publicly, built on evidence.{% endblock %}
+
+{% block content %}
+
+<!-- ── HERO ─────────────────────────────────────────────── -->
+<section class="hero">
+    <div class="container">
+        <div class="hero-inner">
+            <div class="hero-content">
+                <div class="hero-pre">
+                    <span class="hero-pre-dot"></span>
+                    <span class="mono" style="font-size:10px; letter-spacing:0.16em; color:var(--text-2);">LIVE — AUTOMATED TESTING PHASE</span>
+                </div>
+                <h1 class="hero-title">
+                    Discretionary trading<br>
+                    <span class="hero-title-accent">doesn't work.</span>
+                </h1>
+                <p class="hero-desc">
+                    Most retail traders fail not because of psychology — but because they are trading unvalidated models and calling the losses a mindset problem. The correct approach is systematic: build a hypothesis, validate it through data, automate it entirely.
+                </p>
+                <p class="hero-desc-sub">
+                    This site documents that process in full — including a live automated forex model built from scratch.
+                </p>
+                <div class="hero-ctas">
+                    <a href="/models" class="btn btn-primary">View The Model →</a>
+                    <a href="/series" class="btn btn-outline">Watch The Series</a>
+                </div>
+            </div>
+            <div class="hero-terminal">
+                <div class="terminal-bar">
+                    <span class="terminal-dot"></span>
+                    <span class="terminal-dot"></span>
+                    <span class="terminal-dot"></span>
+                    <span class="terminal-title">model_status.py</span>
+                </div>
+                <div class="terminal-body">
+                    <div class="terminal-line"><span class="t-comment"># Model 01</span></div>
+                    <div class="terminal-line"><span class="t-key">status</span> <span class="t-op">=</span> <span class="t-str">"live_testing"</span></div>
+                    <div class="terminal-line"><span class="t-key">instruments</span> <span class="t-op">=</span> <span class="t-bracket">[</span><span class="t-str">"EURUSD"</span>, <span class="t-str">"GBPUSD"</span>, <span class="t-str">"AUDUSD"</span>,</div>
+                    <div class="terminal-line">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="t-str">"USDCAD"</span>, <span class="t-str">"USDCHF"</span>, <span class="t-str">"NZDUSD"</span><span class="t-bracket">]</span></div>
+                    <div class="terminal-line"><span class="t-key">win_rate</span> <span class="t-op">=</span> <span class="t-num">"25–32%"</span></div>
+                    <div class="terminal-line"><span class="t-key">expectancy</span> <span class="t-op">=</span> <span class="t-num">"+0.25R"</span></div>
+                    <div class="terminal-line"><span class="t-key">avg_rr</span> <span class="t-op">=</span> <span class="t-num">"2.4–3.6R"</span></div>
+                    <div class="terminal-line"><span class="t-key">validation</span> <span class="t-op">=</span> <span class="t-str">"15/15 profitable years"</span></div>
+                    <div class="terminal-line"><span class="t-key">sample_size</span> <span class="t-op">=</span> <span class="t-num">30000</span> <span class="t-comment"># trades</span></div>
+                    <div class="terminal-line t-blink"><span class="t-cursor">█</span></div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ── BELIEF ──────────────────────────────────────────── -->
+<section class="belief">
+    <div class="container">
+        <div class="belief-inner">
+            <div class="section-header">
+                <span class="label">Core Belief</span>
+                <h2 class="section-title">Why discretionary trading fails</h2>
+            </div>
+            <div class="belief-grid">
+                <div class="belief-block">
+                    <span class="belief-num">01</span>
+                    <h3 class="belief-title">The model is untested</h3>
+                    <p class="belief-desc">Most retail strategies have never been validated against real data. Without a defined hypothesis and a rigorous testing process, there is no way to separate edge from luck.</p>
+                </div>
+                <div class="belief-block">
+                    <span class="belief-num">02</span>
+                    <h3 class="belief-title">Psychology is a scapegoat</h3>
+                    <p class="belief-desc">When a losing streak hits, the retail narrative blames discipline and mindset. In reality, trading an unvalidated model makes it impossible to separate losses caused by poor process from losses that are simply part of a valid strategy's distribution.</p>
+                </div>
+                <div class="belief-block">
+                    <span class="belief-num">03</span>
+                    <h3 class="belief-title">The correct process exists</h3>
+                    <p class="belief-desc">Build a hypothesis. Validate it manually with a small sample. Confirm it through automated backtesting across years of data. Then automate execution entirely.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ── ABOUT ───────────────────────────────────────────── -->
+<section class="about">
+    <div class="container">
+        <div class="about-inner">
+            <div class="about-meta">
+                <span class="label">Who</span>
+                <div class="about-name">Zach Simpson</div>
+                <div class="mono" style="font-size:11px; color:var(--text-2); letter-spacing:0.08em;">2.5 years in markets</div>
+            </div>
+            <div class="about-content">
+                <p>2.5 years in markets. Started the same way most retail traders do — discretionary price action, pattern recognition, and the belief that psychology was the variable standing between losses and consistency.</p>
+                <p>It wasn't. The model was unprofitable. Psychology was covering that up.</p>
+                <p>Since then: a complete transition to systematic, data-driven strategy development. One validated automated forex model currently in live testing. A YouTube series documenting the full process. And this site — built to share the work publicly.</p>
+                <div class="about-links">
+                    <a href="/models" class="btn btn-ghost">View The Model →</a>
+                    <a href="https://www.youtube.com/@ZimoTrades" target="_blank" class="btn btn-ghost">YouTube →</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ── TRUST BUILDERS ──────────────────────────────────── -->
+<section class="trust">
+    <div class="container">
+        <div class="section-header">
+            <span class="label">Explore</span>
+            <h2 class="section-title">Start here</h2>
+        </div>
+        <div class="trust-grid">
+            <a href="/models" class="trust-card">
+                <div class="trust-card-head">
+                    <span class="trust-num">01</span>
+                    <span class="badge badge-live">Live</span>
+                </div>
+                <h3 class="trust-title">The Model</h3>
+                <p class="trust-desc">A fully automated forex strategy built on structural displacement and institutional order flow. Validated across 15 years of data. Currently in live testing.</p>
+                <span class="trust-cta">View model →</span>
+            </a>
+            <a href="/series" class="trust-card">
+                <div class="trust-card-head">
+                    <span class="trust-num">02</span>
+                    <span class="badge badge-live">8 Episodes</span>
+                </div>
+                <h3 class="trust-title">The Series</h3>
+                <p class="trust-desc">A complete YouTube series documenting the research process from first hypothesis to live execution. Written transcripts available for every episode.</p>
+                <span class="trust-cta">View series →</span>
+            </a>
+            <a href="/community" class="trust-card">
+                <div class="trust-card-head">
+                    <span class="trust-num">03</span>
+                    <span class="badge badge-soon">Free</span>
+                </div>
+                <h3 class="trust-title">The Community</h3>
+                <p class="trust-desc">A Discord server for traders building systematic strategies. Daily market briefs, process discussion, and accountability. Free to join.</p>
+                <span class="trust-cta">Join →</span>
+            </a>
+        </div>
+    </div>
+</section>
+
+<!-- ── DISCORD CTA ─────────────────────────────────────── -->
+<section class="discord-cta">
+    <div class="container">
+        <div class="discord-cta-inner">
+            <div>
+                <span class="label">Community</span>
+                <h2 class="discord-cta-title">Join the Discord</h2>
+                <p class="discord-cta-desc">Free to join. Built for traders who take research and validation seriously — daily market briefs, episode discussion, and a community working through the same process.</p>
+            </div>
+            <a href="https://discord.gg/QUc64HkMZQ" target="_blank" class="btn btn-primary">Join Free →</a>
+        </div>
+    </div>
+</section>
+
+{% endblock %}
+
+{% block extra_css %}
+<style>
+/* ── HERO ── */
+.hero {
+    padding: 96px 0 80px;
+    border-bottom: 1px solid var(--border);
+    background: linear-gradient(180deg, var(--bg-1) 0%, var(--bg-0) 100%);
+    position: relative;
+    z-index: 0;
+}
+
+.hero-inner {
+    display: grid;
+    grid-template-columns: 1fr 420px;
+    gap: 64px;
+    align-items: center;
+}
+
+.hero-pre {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 24px;
+}
+
+.hero-pre-dot {
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+    background: var(--green);
+    box-shadow: 0 0 8px var(--green);
+    animation: pulse 2s ease-in-out infinite;
+}
+
+@keyframes pulse {
+    0%, 100% { opacity: 1; }
+    50% { opacity: 0.4; }
+}
+
+.hero-title {
+    font-family: var(--mono);
+    font-size: clamp(32px, 4.5vw, 54px);
+    font-weight: 500;
+    color: var(--text-0);
+    line-height: 1.1;
+    letter-spacing: -0.025em;
+    margin-bottom: 24px;
+}
+
+.hero-title-accent {
+    color: var(--accent);
+}
+
+.hero-desc {
+    font-size: 15px;
+    color: var(--text-1);
+    line-height: 1.75;
+    max-width: 520px;
+    margin-bottom: 12px;
+}
+
+.hero-desc-sub {
+    font-size: 14px;
+    color: var(--text-2);
+    line-height: 1.7;
+    max-width: 480px;
+    margin-bottom: 36px;
+}
+
+.hero-ctas {
+    display: flex;
+    gap: 12px;
+    flex-wrap: wrap;
+}
+
+/* Terminal */
+.hero-terminal {
+    background: var(--bg-1);
+    border: 1px solid var(--border-mid);
+    border-radius: 4px;
+    overflow: hidden;
+    font-family: var(--mono);
+}
+
+.terminal-bar {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    padding: 10px 14px;
+    background: var(--bg-2);
+    border-bottom: 1px solid var(--border);
+}
+
+.terminal-dot {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background: var(--border-hi);
+}
+
+.terminal-dot:first-child { background: #ff5f56; }
+.terminal-dot:nth-child(2) { background: #ffbd2e; }
+.terminal-dot:nth-child(3) { background: #27c93f; }
+
+.terminal-title {
+    font-size: 10px;
+    color: var(--text-2);
+    letter-spacing: 0.06em;
+    margin-left: 8px;
+}
+
+.terminal-body {
+    padding: 20px 18px;
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+}
+
+.terminal-line {
+    font-size: 12px;
+    line-height: 1.6;
+    white-space: nowrap;
+}
+
+.t-comment { color: var(--text-3); }
+.t-key { color: var(--accent); }
+.t-op { color: var(--text-2); }
+.t-str { color: var(--green); }
+.t-num { color: var(--amber); }
+.t-bracket { color: var(--text-1); }
+.t-cursor { color: var(--accent); }
+
+.t-blink .t-cursor {
+    animation: blink 1s step-end infinite;
+}
+
+@keyframes blink {
+    0%, 100% { opacity: 1; }
+    50% { opacity: 0; }
+}
+
+/* ── BELIEF ── */
+.belief { background: var(--bg-0); }
+
+.belief-inner { }
+
+.belief-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1px;
+    background: var(--border);
+    margin-top: 0;
+}
+
+.belief-block {
+    background: var(--bg-1);
+    padding: 32px 28px;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    transition: background 0.18s;
+}
+
+.belief-block:hover {
+    background: var(--bg-hover);
+}
+
+.belief-num {
+    font-family: var(--mono);
+    font-size: 10px;
+    color: var(--accent);
+    letter-spacing: 0.14em;
+}
+
+.belief-title {
+    font-family: var(--mono);
+    font-size: 14px;
+    font-weight: 500;
+    color: var(--text-0);
+    line-height: 1.3;
+}
+
+.belief-desc {
+    font-size: 13px;
+    color: var(--text-2);
+    line-height: 1.7;
+}
+
+/* ── ABOUT ── */
+.about { background: var(--bg-0); }
+
+.about-inner {
+    display: grid;
+    grid-template-columns: 200px 1fr;
+    gap: 64px;
+    align-items: start;
+}
+
+.about-name {
+    font-family: var(--mono);
+    font-size: 18px;
+    font-weight: 500;
+    color: var(--text-0);
+    margin-top: 12px;
+    margin-bottom: 4px;
+}
+
+.about-content {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.about-content p {
+    font-size: 15px;
+    color: var(--text-1);
+    line-height: 1.75;
+    max-width: 600px;
+}
+
+.about-links {
+    display: flex;
+    gap: 4px;
+    margin-top: 8px;
+}
+
+/* ── TRUST ── */
+.trust { background: var(--bg-0); }
+
+.trust-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1px;
+    background: var(--border);
+}
+
+.trust-card {
+    background: var(--bg-1);
+    padding: 32px 28px;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    transition: background 0.18s;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.trust-card:hover {
+    background: var(--bg-hover);
+}
+
+.trust-card:hover .trust-cta {
+    color: var(--accent);
+}
+
+.trust-card-head {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.trust-num {
+    font-family: var(--mono);
+    font-size: 10px;
+    color: var(--accent);
+    letter-spacing: 0.14em;
+}
+
+.trust-title {
+    font-family: var(--mono);
+    font-size: 17px;
+    font-weight: 500;
+    color: var(--text-0);
+}
+
+.trust-desc {
+    font-size: 13px;
+    color: var(--text-2);
+    line-height: 1.7;
+    flex: 1;
+}
+
+.trust-cta {
+    font-family: var(--mono);
+    font-size: 11px;
+    color: var(--text-2);
+    letter-spacing: 0.06em;
+    transition: color 0.15s;
+    margin-top: 8px;
+}
+
+/* ── DISCORD CTA ── */
+.discord-cta { background: var(--bg-1); border-bottom: none; }
+
+.discord-cta-inner {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 48px;
+}
+
+.discord-cta-title {
+    font-family: var(--mono);
+    font-size: 26px;
+    font-weight: 500;
+    color: var(--text-0);
+    margin-top: 10px;
+    margin-bottom: 12px;
+}
+
+.discord-cta-desc {
+    font-size: 14px;
+    color: var(--text-1);
+    max-width: 480px;
+    line-height: 1.7;
+}
+
+/* Responsive */
+@media (max-width: 900px) {
+    .hero-inner { grid-template-columns: 1fr; gap: 36px; }
+    .hero-terminal { display: none; }
+    .belief-grid { grid-template-columns: 1fr; }
+    .trust-grid { grid-template-columns: 1fr; }
+    .about-inner { grid-template-columns: 1fr; gap: 32px; }
+    .discord-cta-inner { flex-direction: column; align-items: flex-start; }
+}
+
+@media (max-width: 768px) {
+    .hero { padding: 48px 0 40px; }
+    .hero-terminal { display: none; }
+    .hero-title { font-size: 30px; margin-bottom: 16px; }
+    .hero-desc { font-size: 14px; }
+    .hero-desc-sub { font-size: 13px; margin-bottom: 28px; }
+    .hero-ctas { gap: 10px; }
+    .hero-ctas .btn { width: 100%; justify-content: center; }
+    .belief-grid { grid-template-columns: 1fr; }
+    .trust-grid { grid-template-columns: 1fr; }
+    .about-inner { grid-template-columns: 1fr; gap: 24px; }
+    .discord-cta-inner { flex-direction: column; align-items: flex-start; gap: 24px; }
+    .discord-cta-title { font-size: 20px; }
+}
+</style>
+{% endblock %}

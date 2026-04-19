@@ -1,0 +1,330 @@
+{% extends "base.html" %}
+{% block title %}Community | One of None Trading — Free Discord for Systematic Traders{% endblock %}
+{% block meta_desc %}A free Discord community for traders building systematic, validated strategies. Daily market briefs, process discussion, and accountability. Built around research and automation.{% endblock %}
+
+{% block content %}
+
+<div class="page-header">
+    <div class="container">
+        <span class="label">Discord Community</span>
+        <h1 class="page-title">Community</h1>
+        <p class="page-subtitle">A free Discord server for traders who are serious about building systematic strategies — properly researched, properly validated, and properly automated.</p>
+        <a href="https://discord.gg/QUc64HkMZQ" target="_blank" class="btn btn-primary">Join The Discord →</a>
+    </div>
+</div>
+
+<!-- ── WHAT THIS IS ─────────────────────────────────────── -->
+<section>
+    <div class="container">
+        <div class="purpose-grid">
+            <div class="purpose-text">
+                <div class="section-header" style="margin-bottom:24px;">
+                    <span class="label">Purpose</span>
+                    <h2 class="section-title">What this community is built around</h2>
+                </div>
+                <p>This server exists for one purpose — to build traders who understand how to research, validate, and automate a strategy properly.</p>
+                <p>The community is built around the belief that retail trading requires a systematic, evidence-based approach to work long-term. That means hypothesis-driven research, automated validation, and full strategy automation. Everything here is oriented around that process.</p>
+                <p>The focus is on process, methodology, and execution. Signals, tips, and predictions are outside the scope of this community.</p>
+            </div>
+            <div class="purpose-pillars">
+                {% set pillars = [
+                    ("Process-First", "Discussion is focused on frameworks, testing methodology, and execution. Not tips, not signals, not predictions."),
+                    ("High Signal", "Structured channels, clear purpose per channel, pinned resources. Built for clarity over volume."),
+                    ("Accountability", "Weekly goals, daily check-ins, and progress tracking. Consistency is built through repetition."),
+                    ("Daily Context", "AI-assisted daily and weekly market briefs published every morning. Macro context without the noise.")
+                ] %}
+                {% for title, desc in pillars %}
+                <div class="pillar-block">
+                    <h3 class="pillar-title">{{ title }}</h3>
+                    <p class="pillar-desc">{{ desc }}</p>
+                </div>
+                {% endfor %}
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ── SERVER STRUCTURE ────────────────────────────────── -->
+<section>
+    <div class="container">
+        <div class="section-header">
+            <span class="label">Inside The Server</span>
+            <h2 class="section-title">What's in it</h2>
+        </div>
+        <div class="channels-grid">
+            {% set categories = [
+                ("The Process", [
+                    ("#what-is-this", "Overview of the research and automation pipeline this community is built around."),
+                    ("#resources", "Tools, links, and resources relevant to systematic trading and strategy research.")
+                ]),
+                ("Briefs", [
+                    ("#daily-market-review", "AI-assisted daily market review covering the past 24 hours. Published every morning."),
+                    ("#weekly-market-review", "Weekly consolidated review across all major asset classes. Published every week.")
+                ]),
+                ("Series", [
+                    ("#series-roadmap", "Full episode index for the Quant-Inspired Strategy series."),
+                    ("#episode-discussion", "Questions and discussion for each episode, organised by thread.")
+                ]),
+                ("Strategy", [
+                    ("#research-foundations", "Coming soon — research methodology and hypothesis development."),
+                    ("#validation-and-testing", "Coming soon — automated validation and backtesting frameworks."),
+                    ("#automation-and-deployment", "Coming soon — full strategy automation and live deployment.")
+                ]),
+                ("Market Talk", [
+                    ("#market-commentary", "Macro themes and broad market observations. Context, not calls."),
+                    ("#news-and-events", "High-impact economic events, central bank decisions, and geopolitical headlines.")
+                ]),
+                ("Community", [
+                    ("#introductions", "Introduce yourself when you join."),
+                    ("#general", "Main community chat — trading, routines, progress, conversation."),
+                    ("#questions", "Ask anything about the process, the series, or the community."),
+                    ("#psychology", "The human side of execution — diagnose and improve."),
+                    ("#wins-losses-lessons", "Share real outcomes with a lesson attached."),
+                    ("#accountability-goals", "Weekly goals and daily check-ins.")
+                ])
+            ] %}
+            {% for category, channels in categories %}
+            <div class="channel-category">
+                <span class="category-name">{{ category }}</span>
+                {% for channel, desc in channels %}
+                <div class="channel-row">
+                    <span class="channel-name mono">{{ channel }}</span>
+                    <span class="channel-desc">{{ desc }}</span>
+                </div>
+                {% endfor %}
+            </div>
+            {% endfor %}
+        </div>
+    </div>
+</section>
+
+<!-- ── WHERE THIS IS GOING ─────────────────────────────── -->
+<section>
+    <div class="container">
+        <div class="section-header">
+            <span class="label">Future</span>
+            <h2 class="section-title">Where this is heading</h2>
+        </div>
+        <div class="future-grid">
+            <div class="future-block future-block-now">
+                <span class="future-label">Now</span>
+                <h3 class="future-title">Free Community</h3>
+                <p class="future-desc">Open Discord server. Daily market briefs, series discussion, process-oriented community. Free to join, free to participate.</p>
+                <a href="https://discord.gg/QUc64HkMZQ" target="_blank" class="btn btn-primary" style="margin-top:16px; align-self:flex-start;">Join Free →</a>
+            </div>
+            <div class="future-block future-block-next">
+                <span class="future-label">Next</span>
+                <h3 class="future-title">Guided Program</h3>
+                <p class="future-desc">The Strategy section of the server will become a structured, guided program — walking through the complete process of building, validating, and automating a strategy from scratch. Content currently being developed.</p>
+                <span class="badge badge-soon" style="margin-top:16px; align-self:flex-start;">In Development</span>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ── JOIN CTA ────────────────────────────────────────── -->
+<section>
+    <div class="container">
+        <div class="join-cta">
+            <div>
+                <h2 class="join-title">Ready to join?</h2>
+                <p class="join-desc">Free to join. No paid tiers currently. Just traders building systematic strategies and following the correct process.</p>
+            </div>
+            <div style="display:flex; gap:12px; flex-wrap:wrap;">
+                <a href="https://discord.gg/QUc64HkMZQ" target="_blank" class="btn btn-primary">Join The Discord →</a>
+                <a href="/roadmap" class="btn btn-outline">View Roadmap</a>
+            </div>
+        </div>
+    </div>
+</section>
+
+{% endblock %}
+
+{% block extra_css %}
+<style>
+/* Purpose */
+.purpose-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 64px;
+    align-items: start;
+}
+
+.purpose-text {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    padding-top: 0;
+}
+
+.purpose-text p {
+    font-size: 15px;
+    color: var(--text-1);
+    line-height: 1.75;
+}
+
+.purpose-pillars {
+    display: flex;
+    flex-direction: column;
+    gap: 1px;
+    background: var(--border);
+}
+
+.pillar-block {
+    background: var(--bg-1);
+    padding: 20px 24px;
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+    transition: background 0.18s;
+}
+
+.pillar-block:hover {
+    background: var(--bg-hover);
+}
+
+.pillar-title {
+    font-family: var(--mono);
+    font-size: 13px;
+    font-weight: 500;
+    color: var(--text-0);
+}
+
+.pillar-desc {
+    font-size: 13px;
+    color: var(--text-2);
+    line-height: 1.6;
+}
+
+/* Channels */
+.channels-grid {
+    display: flex;
+    flex-direction: column;
+    gap: 1px;
+    background: var(--border);
+}
+
+.channel-category {
+    background: var(--bg-1);
+    overflow: hidden;
+}
+
+.category-name {
+    display: block;
+    font-family: var(--mono);
+    font-size: 9px;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: var(--accent);
+    padding: 10px 20px;
+    background: var(--bg-2);
+    border-bottom: 1px solid var(--border);
+}
+
+.channel-row {
+    display: grid;
+    grid-template-columns: 220px 1fr;
+    gap: 24px;
+    padding: 12px 20px;
+    border-bottom: 1px solid var(--border);
+    transition: background 0.12s;
+}
+
+.channel-row:last-child { border-bottom: none; }
+.channel-row:hover { background: var(--bg-hover); }
+
+.channel-name {
+    font-size: 12px;
+    color: var(--text-0);
+}
+
+.channel-desc {
+    font-size: 12px;
+    color: var(--text-2);
+    line-height: 1.5;
+}
+
+/* Future */
+.future-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1px;
+    background: var(--border);
+}
+
+.future-block {
+    background: var(--bg-1);
+    padding: 36px 32px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.future-block-now {
+    border-left: 3px solid var(--green);
+}
+
+.future-block-next {
+    border-left: 3px solid var(--accent);
+}
+
+.future-label {
+    font-family: var(--mono);
+    font-size: 9px;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: var(--text-2);
+}
+
+.future-title {
+    font-family: var(--mono);
+    font-size: 20px;
+    font-weight: 500;
+    color: var(--text-0);
+}
+
+.future-desc {
+    font-size: 14px;
+    color: var(--text-2);
+    line-height: 1.7;
+    max-width: 400px;
+}
+
+/* Join CTA */
+.join-cta {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 48px;
+    background: var(--bg-1);
+    border: 1px solid var(--border);
+    padding: 48px 40px;
+}
+
+.join-title {
+    font-family: var(--mono);
+    font-size: 26px;
+    font-weight: 500;
+    color: var(--text-0);
+    margin-bottom: 10px;
+}
+
+.join-desc {
+    font-size: 14px;
+    color: var(--text-1);
+    max-width: 440px;
+    line-height: 1.7;
+}
+
+@media (max-width: 768px) {
+    .purpose-grid { grid-template-columns: 1fr; gap: 32px; }
+    .future-grid { grid-template-columns: 1fr; }
+    .channel-row { grid-template-columns: 1fr; gap: 4px; }
+    .join-cta { flex-direction: column; align-items: flex-start; padding: 28px 20px; gap: 24px; }
+    .join-title { font-size: 20px; }
+    .join-cta .btn { width: 100%; justify-content: center; }
+    .future-block { padding: 24px 20px; }
+    .future-title { font-size: 18px; }
+}
+</style>
+{% endblock %}

@@ -1,0 +1,271 @@
+{% extends "base.html" %}
+{% block title %}The Series | One of None Trading — Building a Trading Strategy From Scratch{% endblock %}
+{% block meta_desc %}A complete video and written series documenting the process of building a systematic trading strategy from scratch — hypothesis formation, validation, and full automation.{% endblock %}
+
+{% block content %}
+
+<div class="page-header">
+    <div class="container">
+        <span class="label">Quant-Inspired Strategy</span>
+        <h1 class="page-title">The Series</h1>
+        <p class="page-subtitle">A complete documentation of the process that should be applied to strategy development — from first hypothesis through to automated execution. Watch in order. Written transcripts available for every episode.</p>
+        <div style="display:flex; gap:12px; flex-wrap:wrap;">
+            <a href="https://www.youtube.com/@ZimoTrades/playlists" target="_blank" class="btn btn-primary">Watch on YouTube →</a>
+        </div>
+    </div>
+</div>
+
+<!-- ── HOW TO USE ──────────────────────────────────────── -->
+<section>
+    <div class="container">
+        <div class="section-header">
+            <span class="label">Before You Start</span>
+            <h2 class="section-title">How to follow this series</h2>
+        </div>
+        <div class="how-grid">
+            <div class="how-block">
+                <span class="how-num">01</span>
+                <h3 class="how-title">Watch in order</h3>
+                <p class="how-desc">Each episode builds directly on the previous one. Do not skip episodes. The process is sequential by design.</p>
+            </div>
+            <div class="how-block">
+                <span class="how-num">02</span>
+                <h3 class="how-title">Read the transcripts</h3>
+                <p class="how-desc">Every episode has a written transcript available via the Read link.</p>
+            </div>
+            <div class="how-block">
+                <span class="how-num">03</span>
+                <h3 class="how-title">Apply it to your own research</h3>
+                <p class="how-desc">This series is not meant to be consumed passively. The goal is a repeatable process you can apply to your own ideas and dataset.</p>
+            </div>
+            <div class="how-block">
+                <span class="how-num">04</span>
+                <h3 class="how-title">Discuss in Discord</h3>
+                <p class="how-desc">Every episode has a dedicated thread in the Discord server. Post questions in the relevant thread so answers stay organised.</p>
+            </div>
+        </div>
+
+        <div class="note-box" style="margin-top:32px;">
+            <span class="note-tag">// IMPORTANT</span>
+            The early episodes document the manual research phase — a necessary first step in the process. The series will progress through automated validation and full automation as subsequent episodes are released.
+        </div>
+    </div>
+</section>
+
+<!-- ── EPISODE INDEX ───────────────────────────────────── -->
+<section>
+    <div class="container">
+        <div class="section-header">
+            <span class="label">Episode Index</span>
+            <h2 class="section-title">All episodes</h2>
+        </div>
+
+        {% set episodes = [
+            ("01", "How I Built A Quant-Inspired Trading Strategy", "Series overview and the full development process from idea to execution.", "live", "https://www.youtube.com/watch?v=qHZj1Gbg34g", "/episode/01"),
+            ("02", "Feature Engineering For Traders", "Structuring raw price data into testable, measurable features.", "live", "https://youtu.be/mOru8LXcXGA", "/episode/02"),
+            ("03", "Market Regimes Explained", "Defining market structure mechanically so results can be compared across time.", "live", "https://youtu.be/D9Ef3SfZ9-A", "/episode/03"),
+            ("04", "From Observation to Hypothesis", "Turning informal market observations into formally testable claims.", "live", "https://youtu.be/bIl0NbW5W0o", "/episode/04"),
+            ("05", "From Hypothesis to Measurable Data", "Operationalising trading concepts into structured, consistent data.", "live", "https://youtu.be/SDBsXOUBUR0", "/episode/05"),
+            ("06", "How to Collect Impartial Trading Data", "Manual backtesting done correctly — without bias corrupting the results.", "live", "https://youtu.be/TUDbVd3OouY", "/episode/06"),
+            ("07", "Structuring & Evaluating Trading Data", "Determining whether features have genuine predictive value.", "live", "https://youtu.be/sAS7CHkhDns", "/episode/07"),
+            ("08", "Engineering Sub-Hypotheses", "Refining a model without corrupting the original dataset.", "live", "https://youtu.be/eLWlBDtMw8U", "/episode/08")
+        ] %}
+
+        <div class="episode-table">
+            <div class="ep-table-head">
+                <span>#</span>
+                <span>Title</span>
+                <span>Description</span>
+                <span>Status / Links</span>
+            </div>
+            {% for num, title, desc, status, watch, read in episodes %}
+            <div class="ep-row {% if status == 'soon' %}ep-row-dim{% endif %}">
+                <span class="ep-num mono">{{ num }}</span>
+                <span class="ep-title">{{ title }}</span>
+                <span class="ep-desc">{{ desc }}</span>
+                <div class="ep-row-actions">
+                    {% if status == 'live' %}
+                    <span class="badge badge-live">Live</span>
+                    {% else %}
+                    <span class="badge badge-soon">Soon</span>
+                    {% endif %}
+                    {% if watch %}
+                    <a href="{{ watch }}" target="_blank" class="ep-link">▶ Watch</a>
+                    {% else %}
+                    <span class="ep-placeholder">—</span>
+                    {% endif %}
+                    {% if read %}
+                    <a href="{{ read }}" class="ep-link">Read →</a>
+                    {% else %}
+                    <span class="ep-placeholder">—</span>
+                    {% endif %}
+                </div>
+            </div>
+            {% endfor %}
+        </div>
+    </div>
+</section>
+
+{% endblock %}
+
+{% block extra_css %}
+<style>
+.how-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 1px;
+    background: var(--border);
+}
+
+.how-block {
+    background: var(--bg-1);
+    padding: 28px 24px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    transition: background 0.18s;
+}
+
+.how-block:hover {
+    background: var(--bg-hover);
+}
+
+.how-num {
+    font-family: var(--mono);
+    font-size: 10px;
+    color: var(--accent);
+    letter-spacing: 0.14em;
+}
+
+.how-title {
+    font-family: var(--mono);
+    font-size: 13px;
+    font-weight: 500;
+    color: var(--text-0);
+}
+
+.how-desc {
+    font-size: 13px;
+    color: var(--text-2);
+    line-height: 1.65;
+}
+
+/* Episode table */
+.episode-table {
+    display: flex;
+    flex-direction: column;
+    gap: 1px;
+    background: var(--border);
+    border: 1px solid var(--border);
+}
+
+.ep-table-head {
+    display: grid;
+    grid-template-columns: 40px 1fr 200px auto;
+    padding: 9px 20px;
+    background: var(--bg-2);
+    gap: 16px;
+}
+
+.ep-table-head span {
+    font-family: var(--mono);
+    font-size: 9px;
+    letter-spacing: 0.16em;
+    text-transform: uppercase;
+    color: var(--accent);
+}
+
+.ep-row {
+    display: grid;
+    grid-template-columns: 40px 1fr 200px auto;
+    align-items: center;
+    padding: 14px 20px;
+    background: var(--bg-1);
+    transition: background 0.15s;
+    gap: 16px;
+}
+
+.ep-row-actions {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+}
+
+.ep-row:hover { background: var(--bg-hover); }
+
+.ep-row-dim { opacity: 0.5; }
+
+.ep-num {
+    font-size: 11px;
+    color: var(--accent);
+    letter-spacing: 0.1em;
+}
+
+.ep-title {
+    font-family: var(--mono);
+    font-size: 12px;
+    color: var(--text-0);
+    line-height: 1.4;
+}
+
+.ep-desc {
+    font-size: 12px;
+    color: var(--text-2);
+    line-height: 1.4;
+}
+
+.ep-link {
+    font-family: var(--mono);
+    font-size: 11px;
+    color: var(--accent);
+    transition: color 0.15s;
+    white-space: nowrap;
+}
+
+.ep-link:hover { color: var(--text-0); }
+
+.ep-placeholder {
+    font-family: var(--mono);
+    font-size: 11px;
+    color: var(--text-3);
+}
+
+@media (max-width: 900px) {
+    .how-grid { grid-template-columns: repeat(2, 1fr); }
+    .ep-table-head { display: none; }
+    .ep-row {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 6px;
+        padding: 14px 16px;
+    }
+    .ep-num {
+        font-size: 10px;
+        color: var(--accent);
+        letter-spacing: 0.14em;
+        text-align: left;
+        align-self: flex-start;
+    }
+    .ep-title {
+        font-size: 13px;
+        color: var(--text-0);
+        line-height: 1.4;
+    }
+    .ep-desc {
+        font-size: 12px;
+        color: var(--text-2);
+    }
+    .ep-row-actions {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        width: 100%;
+        margin-top: 2px;
+    }}
+
+@media (max-width: 600px) {
+    .how-grid { grid-template-columns: 1fr; }
+}
+</style>
+{% endblock %}

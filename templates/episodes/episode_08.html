@@ -1,0 +1,72 @@
+{% extends "episodes/base_episode.html" %}
+{% block title %}Episode 08 — Engineering Sub-Hypotheses | One of None Trading{% endblock %}
+{% block meta_desc %}Refining a model without corrupting the original dataset. How to test variations and improvements while maintaining research integrity.{% endblock %}
+
+{% set ep_num = "08" %}
+{% set ep_title = "Engineering Sub-Hypotheses" %}
+{% set ep_subtitle = "Refining a model without corrupting the original dataset." %}
+{% set ep_watch = "https://youtu.be/eLWlBDtMw8U" %}
+{% set ep_prev = "07" %}
+{% set ep_next = None %}
+
+{% block transcript %}
+<div class="ep-section">
+    <div class="ep-section-title">The Problem This Episode Solves</div>
+    <p>Most trading strategies do not fail because the original idea was flawed. They fail because traders continuously modify the model while it is still being tested.</p>
+    <p>A new observation is made. A rule is added. Another observation appears. Another rule is added. This process continues until the original hypothesis becomes contaminated by a collection of untested ideas. At that point, the model being tested is no longer the model that was originally defined.</p>
+    <p>When new rules are introduced without independent validation, you are not strengthening the model — you are weakening the validity of the data that supported it. Good research does not add ideas to a model. It tests them against it.</p>
+</div>
+
+<div class="ep-section">
+    <div class="ep-section-title">Where We Are in the Process</div>
+    <p>Within the quant-inspired development pipeline, we return to the hypothesis stage. Although we previously moved into validation, this step requires a temporary regression. New observations made during data collection must be tested independently before they are incorporated into the model.</p>
+    <p>Within the series framework, we are now entering the stage of conditional dependence — conditioning our existing data based on newly observed behaviour. At this point, you should already have: a defined behavioural model, a structured dataset collected impartially, and probability distributions for your original hypothesis. The purpose of this episode is not to rebuild the model. It is to refine it without corrupting it.</p>
+</div>
+
+<div class="ep-section">
+    <div class="ep-section-title">The Retail Mistake</div>
+    <p>When traders notice something that appears to influence outcomes, they tend to act immediately. They convert the observation directly into a rule. This is where the model breaks.</p>
+    <p>By introducing a rule without testing it independently, the dataset becomes contaminated, the hypothesis changes mid-test, and the original results become invalid. Instead of improving the model, this process destroys its reliability.</p>
+</div>
+
+<div class="ep-section">
+    <div class="ep-section-title">The Correct Approach — Sub-Hypotheses</div>
+    <p>Rather than modifying the original model, a new structure is introduced: the sub-hypothesis. A sub-hypothesis is a conditional version of the original hypothesis. It isolates a single new observation and tests it independently.</p>
+    <p>The process: make an observation, convert it into a sub-hypothesis, test it separately, validate or invalidate it, and only then consider including it in the model. This ensures that every new idea is tested on its own merit.</p>
+</div>
+
+<div class="ep-section">
+    <div class="ep-section-title">What This Is Not</div>
+    <p>This process is not used to introduce new features, variables, or market regimes. Those changes alter the structure of the model itself and require a full rebuild. If you want to add new features, return to Episode 02. To redefine market regimes, return to Episode 03. To introduce new variables, return to Episode 05.</p>
+    <p>Sub-hypotheses do not rebuild the model. They refine behaviour within it.</p>
+</div>
+
+<div class="ep-section">
+    <div class="ep-section-title">Identifying Which Observations Matter</div>
+    <p>During analysis, you may notice many potential influences on outcome distribution. Most of them should be ignored. Testing every observation leads to dataset fragmentation, reduced sample size, and unnecessary complexity.</p>
+    <p>To determine whether an observation is worth testing, it must satisfy four conditions. First, it must appear repeatedly — if an observation only occurs once or twice, it is likely random. Second, it must plausibly change behaviour — there should be a logical reason why it could influence outcomes. Third, it must fit within the existing model, relating directly to the defined anchor event. Fourth, it must be objectively definable — if it cannot be measured consistently, it cannot be tested. Only observations that meet all four criteria should be considered.</p>
+</div>
+
+<div class="ep-section">
+    <div class="ep-section-title">Constructing a Sub-Hypothesis</div>
+    <p>A sub-hypothesis follows the exact same structure as the original hypothesis — the same anchor event, the same variables and conditions, the same binary outcome. The only addition is the new observation. By keeping everything else identical, you can directly compare original hypothesis results against sub-hypothesis results and isolate the impact of the new condition.</p>
+</div>
+
+<div class="ep-section">
+    <div class="ep-section-title">Example — Weak Displacement Within Confluence</div>
+    <p>In this model, the observation was: when weak displacement occurs within an existing confluence, outcomes appear to change. For example, price undergoes weak displacement through liquidity, but the move is initiated inside a bullish structure.</p>
+    <p>The hypothesis becomes: if weak displacement occurs within an existing confluence, does the probability of a valid outcome change? Before testing, this observation was evaluated against all four criteria — it appeared frequently, had logical reasoning, aligned with the anchor event, and could be defined objectively. Only after passing all four conditions was it tested.</p>
+</div>
+
+<div class="ep-section">
+    <div class="ep-section-title">Why the Original Model Must Not Be Changed</div>
+    <p>Modifying the original model prematurely introduces two major risks. First, it fragments the dataset. Second, it introduces rules that may have no real significance. By testing sub-hypotheses separately, you create independent datasets that can be compared directly — allowing you to determine whether the new observation truly influences behaviour.</p>
+    <p>Introducing sub-hypotheses also creates overlapping datasets. Some examples will belong to the original hypothesis, some to the sub-hypothesis, and some to both simultaneously. This creates dependency within the data. Maintaining consistency across these overlapping datasets becomes the next challenge.</p>
+</div>
+
+<div class="ep-section">
+    <div class="ep-section-title">Bridge to the Next Episode</div>
+    <p>At this stage, the focus is not on expanding the model — it is on protecting it. By testing observations independently, you ensure that every rule within the model is measurable, validated, and statistically justified. This is what separates structured research from discretionary decision-making.</p>
+    <p>In the next episode, we address the complexity introduced by sub-hypotheses — specifically, how to validate them, how to collect data under identical conditions, and how to manage dependency across datasets. This is where conditional modelling becomes fully structured.</p>
+</div>
+{% endblock %}
